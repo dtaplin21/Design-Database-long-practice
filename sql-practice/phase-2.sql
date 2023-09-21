@@ -1,1 +1,17 @@
--- Your code here
+
+
+CREATE TABLE customers (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    name VARCHAR(40) NOT NULL,
+    phone INTEGER(10) UNIQUE,
+    email VARCHAR(255) UNIQUE,
+    points INTEGER NOT NULL DEFAULT 5,
+    created_at TIMESTAMP CURRENT_TIMESTAMP NOT NULL
+);
+
+CREATE TABLE coffee_orders (
+    id INTEGER [primary_key],
+    is_redeemed BOOLEAN,
+    ordered_at TIMESTAMP CURRENT_TIMESTAMP NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL
+);
